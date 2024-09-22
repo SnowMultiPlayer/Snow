@@ -43,9 +43,20 @@
             height: auto; /* Mantiene le proporzioni dell'immagine */
             border-radius: 10px; /* Bordo arrotondato per l'immagine */
         }
+        /* Stile per l'orario in alto a sinistra */
+        #time {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.2rem;
+            color: #fff; /* Colore del testo bianco */
+        }
     </style>
 </head>
 <body>
+    <!-- Contenitore per l'orario -->
+    <div id="time"></div>
+
     <h1>Welcome to Snow!</h1>
     <p>This is a simple website with a black background and a button.</p>
     
@@ -55,5 +66,22 @@
     <!-- Immagine sotto il pulsante -->
     <img src="ima_sge.png" alt="">
 
+    <script>
+        // Funzione per aggiornare l'orario
+        function updateTime() {
+            const timeElement = document.getElementById('time');
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        // Aggiorna l'orario ogni secondo
+        setInterval(updateTime, 1000);
+
+        // Imposta l'orario al caricamento della pagina
+        updateTime();
+    </script>
 </body>
 </html>
