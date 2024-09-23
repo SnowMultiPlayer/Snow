@@ -26,16 +26,43 @@
             margin-top: 20px;
             font-size: 1rem;
             color: #fff;
-            background-color: #007bff; /* Colore del pulsante (blu) */
             border: none;
             border-radius: 5px;
             text-decoration: none;
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        .button:hover {
-            background-color: #0056b3; /* Colore del pulsante al passaggio del mouse */
+        
+        /* Specifici stili per ogni bottone */
+        .discord-button {
+            background-color: #7289da; /* Colore del pulsante Discord */
         }
+        .discord-button:hover {
+            background-color: #5a6baf;
+        }
+
+        .twitter-button {
+            background-color: #1da1f2; /* Colore del pulsante Twitter */
+        }
+        .twitter-button:hover {
+            background-color: #178cd1;
+        }
+
+        .youtube-button {
+            background-color: #ff0000; /* Colore del pulsante YouTube */
+        }
+        .youtube-button:hover {
+            background-color: #cc0000;
+        }
+
+        .tiktok-button {
+            background-color: #000000; /* Colore del pulsante TikTok */
+            border: 1px solid #fff; /* Aggiunta di un bordo bianco */
+        }
+        .tiktok-button:hover {
+            background-color: #333333;
+        }
+
         /* Stile per l'immagine */
         img {
             margin-top: 20px;
@@ -61,12 +88,12 @@
     <p>This is a simple website with a black background and a button.</p>
     
     <!-- Pulsante che porta a un link -->
-    <a href="https://discord.gg/uq5YX5SrTn" class="button">Discord</a>
+    <a href="https://discord.gg/uq5YX5SrTn" class="button discord-button">Discord</a>
 
     <!-- Aggiunta di altri 3 bottoni sotto quello di Discord -->
-    <a href="https://x.com/snowmultiplayer" class="button">Twitter</a>
-    <a href="https://www.youtube.com/channel/UCraCDqz27_y9ghvCdiDuW1w" class="button">YouTube</a>
-    <a href="https://www.tiktok.com/@projectsnowmp" class="button">TikTok</a>
+    <a href="https://x.com/snowmultiplayer" class="button twitter-button">Twitter</a>
+    <a href="https://www.youtube.com/channel/UCraCDqz27_y9ghvCdiDuW1w" class="button youtube-button">YouTube</a>
+    <a href="https://www.tiktok.com/@projectsnowmp" class="button tiktok-button">TikTok</a>
 
     <!-- Immagine sotto il pulsante -->
     <img src="ima_sge.png" alt="">
